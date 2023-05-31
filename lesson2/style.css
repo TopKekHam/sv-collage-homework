@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    background-color: red;
+}
+
+a:any-link {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 1rem;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar2 {
+    display: block;
+    background-color: red;
+}
+
+.t {
+    display: inline-block;
+    color: white;
+    margin: 0 auto;
+}

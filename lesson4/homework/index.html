@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework lesson 4</title>
+</head>
+<body>
+    <script src="/script.js"></script>
+
+    <h1>Exercise 9</h1>
+    
+    <h2>Compiler</h2>
+    <p>
+        Compliler is a program that takes an input (source code of the program)
+        and produces instractions for a machine to execute.
+        <br>The machine can be some sort of processor (CPU/GPU), or a JIT program like .NET runtime that reads the intermediate
+        <br>language byte code that the C#/F#/VBasic compilers produced and converts its to the native machine byte code for
+        <br>the processor to execute.
+    </p>
+    <h2>Interpreter</h2>
+    <p>
+        Interpreter is a program that runs an input as a program
+        <br>(like python) and does not produce an executable to run.
+    </p>
+
+    <h2>Extra</h2>
+    <p>
+        In past years the difference between compiler and interpreter getting smaller, because the interpreters starting to create
+        <br>an machine code to run without creating an executable like V8.
+        <br>Another example, JAI compiler can run the source code
+        without compiling (JAI is parallel to C in a type of usage).
+    </p>
+
+    <br>
+    <br>
+
+    <h1>Exercise 10</h1>
+    <h2>Math.sign(num : number) : number</h2>
+    <p>
+        This method returns 1 or -1 depends on the sign bit of the number.
+        <br>If the number is 0 or -0 it returns it as is.
+        <br>If param is Infinity or -Infinity works as well.
+        <br>If param is NaN returns Nan.
+        <br>If param is any data type that not a number returns NaN.
+    </p>
+
+    <h2>Math.abs(num : number) : number</h2>
+    <p>
+        This method returns absolute of a number, for exaple, if we pass -5 to the method we get 5 as a return value.
+        <br>If param is Infinity or -Infinity works as well.
+        <br>If param is NaN returns NaN.
+        <br>If param is any data type that not a number returns NaN.
+    </p>
+
+</body>
+</html>

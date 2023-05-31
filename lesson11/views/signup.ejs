@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign-up</title>
+	<link rel="stylesheet" href="based.css">
+</head>
+<body>
+	<script>
+		const onSubmit = ()=> {
+			const userName = document.forms["signup"]["userName"].value;
+			const email = document.forms["signup"]["email"].value;
+			const password = document.forms["signup"]["password"].value;
+			const confirmPassword = document.forms["signup"]["confirmPassword"].value;
+			
+			if(userName.length < 4 || userName.length > 8) {
+				alert("Username must be between 4 to 8 characters");
+				return false;
+			}
+			
+			if(email.indexOf("@") == -1) {
+				alert("Email must contain @ sign");
+				return false;
+			}
+			
+			if(password.length < 5 || password > 10 || password.indexOf("$") == -1) {
+				alert("Password must between 5 to 10 character and contain $ sign");
+				return false;
+			}
+			
+			if(password !== confirmPassword) {
+				alert("Confirm password does not match");
+				return false;
+			}
+
+			document.forms["signup"]["confirmPassword"].setAttribute("disabled", true);
+
+			return true;
+		}
+	</script>
+
+	<div class="page-base height-100vh">
+		<div class="row jc-center m-auto-v">
+			<form class="column width-300" action="/home" method="post" name="signup" onsubmit="return onSubmit()">
+				
+				<input hidden name="fullName" value="<%= fullName %>">
+				
+				<p class="no-select">Username</p>
+				<input type="text" name="userName" placeholder="Enter your fullname...">
+				
+				<p class="no-select">Email</p>
+				<input type="email" name="email" placeholder="Enter your email...">
+				
+				<p class="no-select">Password</p>
+				<input type="password" name="password" placeholder="Enter your password...">
+				
+				<p class="no-select">Confirm Password</p>
+				<input type="password" name="confirmPassword" placeholder="Enter your password...">
+
+				<input type="submit" value="Start">
+			</form>
+		</div>
+	</div>
+</body>
+</html>

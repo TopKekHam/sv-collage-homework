@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework lesson 6</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    
+    <style>
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+        }
+    </style>
+
+    <div class="column">
+        <h2>Exercise 1</h2>
+        <div class="row">
+            <p>enter id</p>
+            <input type="text" id="ex_1_input">
+            <button onclick="getById('ex_1_output').innerHTML = `${checkValidIDNumber(getById('ex_1_input').value) ? 'valid id' : 'invalid id'}`">
+                check valid
+            </button>
+            <p id="ex_1_output"></p>
+        </div>
+    </div>
+
+    <div class="column">
+        <h2>Exercise 6</h2>
+
+        <style>
+            .calculator {
+                display: grid;
+                grid-template-rows: repeat(5, 100px);
+                grid-template-columns: repeat(4, 100px);
+            }
+
+            .button {
+                border: 1px solid rgb(26, 24, 24);
+                border-radius: 10px;
+                margin: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                user-select: none;
+            }
+            
+            .button:hover {
+                background-color: aquamarine;
+                cursor: pointer;
+            }
+            
+            .output {
+                border: 1px solid rgb(26, 24, 24);
+                border-radius: 10px;
+                margin: 1rem;
+                grid-column: 1/5;
+                
+                display: flex;
+                align-items: center;
+            }
+            
+            .text {
+                font-size: 2rem;
+                margin: 0 0 0 1rem;
+
+            }
+        </style>
+
+        <div class="calculator">
+            <div class="output"> <p id="calc_output" class="text"></p> </div>
+            
+            <div class="button" onclick="addTextToCalc('1')"> <p> 1 </p> </div>
+            <div class="button" onclick="addTextToCalc('2')"> <p> 2 </p> </div>
+            <div class="button" onclick="addTextToCalc('3')"> <p> 3 </p> </div>
+            <div class="button" onclick="addTextToCalc('+')"> <p> + </p> </div>
+
+            <div class="button" onclick="addTextToCalc('4')"> <p> 4 </p> </div>
+            <div class="button" onclick="addTextToCalc('5')"> <p> 5 </p> </div>
+            <div class="button" onclick="addTextToCalc('6')"> <p> 6 </p> </div>
+            <div class="button" onclick="addTextToCalc('-')"> <p> - </p> </div>
+            
+            <div class="button" onclick="addTextToCalc('7')"> <p> 7 </p> </div>
+            <div class="button" onclick="addTextToCalc('8')"> <p> 8 </p> </div>
+            <div class="button" onclick="addTextToCalc('9')"> <p> 9 </p> </div>
+            <div class="button" onclick="addTextToCalc('*')"> <p> * </p> </div>
+            
+            <div class="button" onclick="addTextToCalc('0')"> <p> 0 </p> </div>
+            <div class="button" onclick="getById('calc_output').innerHTML = '' "> <p> C </p> </div>
+            <div class="button" onclick="calculate()"> <p> = </p> </div>
+            <div class="button" onclick="addTextToCalc('/')"> <p> / </p> </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+import {readFile, writeFile} from "fs";
+import readXlsxFile from "read-excel-file/node"
+
+// exercise 2
+// should be 102 words
+readFile("exercise2.txt", {encoding: "utf-8"}, (err, data) => {
+	if(err) {
+		console.error(err);
+	} else {
+		console.log(`word count: ${data.split(" ").length}`);
+	}
+});
+
+// exercise 3
+{
+	const fileName = "exercise3.txt";
+	const fileData = "=== This is exercise 3 test file. ===";
+	
+	new Promise(res => {
+		writeFile(fileName, fileData, () => {
+			res();
+		})
+	}).then(() => {
+		readFile(fileName, {encoding: "utf-8"}, (err, data)=> {
+			if(err) {
+				console.error(err);
+			} else {
+				console.log(data);
+			}
+		})
+	})
+}
+
+
+// exercise 4
+{
+	// File path.
+	readXlsxFile('./exercise4.xlsx').then((rows) => {
+		let sum = 0;
+		let total = 0;
+
+		rows.forEach(row => {
+			let number = Number.parseInt(row[1]);
+			
+			if(Number.isNaN(number) === false) {
+				sum += number;
+				total++;
+			}
+		});
+
+		console.log(`Avg is: ${sum / total}`);
+  	})
+}

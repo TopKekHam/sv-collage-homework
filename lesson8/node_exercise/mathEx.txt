@@ -1,0 +1,33 @@
+function pow(num, powNum) {
+    if (powNum < 0) return NaN;
+    if (powNum == 0) return 0;
+    if (powNum == 1) return num;
+
+    return num * pow(num, powNum - 1);
+}
+
+// 0-1 0 - 2
+
+// start and end inclusive.
+function nextInt(start, end) {
+    return start + Math.floor(Math.random() * (end - start + 1));
+}
+
+function randomArray() {
+    let array = [];
+
+    while (array.length < 6) {
+        let num = nextInt(1, 36);
+
+        if (array.includes(num) === false) array.push(num);
+    }
+
+    array.push(nextInt(1, 7));
+
+    return array;
+}
+
+module.exports = {
+    pow,
+    randomArray,
+};

@@ -1,0 +1,9 @@
+{
+	"type": "commonjs",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "dependencies": {
+        "validator": "^13.9.0"
+    }
+}

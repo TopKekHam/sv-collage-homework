@@ -1,0 +1,21 @@
+const math = require("./mathEx.js");	
+
+// exercise 1
+{
+	console.log(math.pow(5, 2));
+}
+
+// exercise 2
+{
+	let validator = require('validator');
+
+	const isEmail = validator.isEmail;
+	
+	console.log(`is email: 'foo@bar.com' === ${isEmail('foo@bar.com')}`);
+	console.log(`is email: '@bar.com' === ${isEmail('@bar.com')}`);
+}
+
+// exercise 3
+{
+	console.log(math.randomArray());
+}

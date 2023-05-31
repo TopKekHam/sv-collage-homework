@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;800&family=Roboto:wght@400;500&display=swap");
+
+:root {
+    --blue: #2488d9;
+    --white: #fff;
+    --grey: #959bab;
+    --font-family: Roboto, sans-serif;
+    --input-border: 1px solid #dbdddd;
+    --element-height: 40px;
+
+    font-family: var(--font-family);
+    user-select: none;
+}
+
+.grey {
+    color: var(--grey);
+}
+
+body {
+    margin: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    background-color: var(--blue);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    border-radius: 4px;
+}
+
+.inner-container {
+    background-color: var(--white);
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    border-radius: 4px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.inner-container > div {
+    margin: 20px 40px;
+}
+
+.inner-container {
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: calc(50% - 12px);
+}
+
+.margin-r-10 {
+    margin-right: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    display: inline-block;
+    border: none;
+    height: var(--element-height);
+    background-color: #f0f0f0;
+    outline: none;
+    border-radius: 4px;
+    text-indent: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+    color: var(--grey);
+}
+
+.grey {
+    color: var(--grey);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+input[type="checkbox"], .checkbox-label {
+    display: inline-block;
+}
+
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 5px 0;
+}
+
+input[type="submit"] {
+    height: var(--element-height);
+    border: none;
+    border-radius: 4px;
+    padding: 0 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.pointer {
+  cursor: pointer;  
+}

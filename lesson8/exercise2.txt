@@ -1,0 +1,63 @@
+// testing
+
+function replaceAll() {
+    const nodes = document.querySelectorAll("[replacewith]");
+
+    for (const node of nodes) {
+        const templateId = node.attributes.replaceWith.value;
+        const template = document.getElementById(templateId);
+        node.parentElement.replaceChild(template.content.cloneNode(true), node);
+    }
+}
+
+replaceAll();
+
+let itemsData = [];
+
+function main() {
+    fetch("https://dummyjson.com/products")
+        .then((res) => res.json())
+        .then((json) => {
+            itemsData = json.products;
+            listPopulate();
+        });
+}
+
+// js is stupid, we do custom parsing for number
+// Number.parseFloat("123a") -> 123
+function parseNumber(str) {
+    if (Number.isNaN(+str)) return null;
+    return Number.parseFloat(str);
+}
+
+function listPopulate() {
+    const userInput = document.getElementById("search").value;
+    const maxPrice = parseNumber(userInput) || Number.MAX_VALUE;
+    console.log(maxPrice);
+    const list = document.getElementById("list");
+
+    const template = document.getElementById("item-template");
+
+    list.innerHTML = "";
+
+    list.append(
+        ...itemsData.map((item) => {
+            if (item.price >= maxPrice) return "";
+
+            const elm = template.content.cloneNode(true);
+
+            elm.querySelector('[field="title"]').innerHTML = item.title;
+            elm.querySelector('[field="description"]').innerHTML =
+                item.description;
+            elm.querySelector('[field="price"]').innerHTML = item.price;
+
+            return elm;
+        })
+    );
+
+    if (list.innerHTML === "") {
+        list.innerHTML = "Oops not items found 😔";
+    }
+}
+
+main();

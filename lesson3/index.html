@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- svg icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav">
+        <div class="row">
+            <h1 class="nav-logo">Navbar</h1>
+            <div class="row" hide-on-mobile>
+                <a class="nav-link" href="/home">Home</a>
+                <a class="nav-link" visited href="/link">Link</a>
+                <a class="nav-link" disabled href="/Disbled">Disabled</a>
+                <a class="nav-link center" dropdown>Dropdown <i class="ri-arrow-drop-down-fill"></i></a>
+            </div>
+        </div>
+
+        <div class="row nav-right">
+            <input hide-on-mobile type="text" placeholder="Search">
+            <button class="button green-button" hide-on-mobile>Search</button>
+            <button class="button burger-button"><i class="ri-menu-fill"></i></button>
+        </div>
+    </div>
+
+    <div>
+        <div class="page-container top-section">
+            <h1 class="header">Hello,<br show-on-mobile> world!</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nulla ipsa quos tempora sed beatae
+                repudiandae placeat ducimus optio laboriosam.</p>
+            <button class="button blue-button center">Learn more <i class="ri-speed-mini-fill"></i></button>
+        </div>
+
+        <div class="page-container bottom-section">
+            <div class="grid">
+                <div class="card">
+                    <h3 class="card-header ">Heading</h3>
+                    <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et adipisci
+                        architecto soluta natus rem eligendi accusantium ea? Perferendis neque, enim mollitia odio
+                        incidunt, delectus cupiditate laborum vitae ratione nulla, cumque omnis. Dolor, aliquam dolorum!
+                    </p>
+                    <button class="button grey-button center">View details <i class="ri-speed-mini-fill"></i></button>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-header ">Heading</h3>
+                    <p class="card-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error rem sunt at
+                        sapiente ut mollitia tempore ab odio molestiae natus.</p>
+                    <button class="button grey-button center">View details <i class="ri-speed-mini-fill"></i></button>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-header ">Heading</h3>
+                    <p class="card-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iure
+                        obcaecati soluta facilis. Eius molestias consequatur necessitatibus autem nesciunt deserunt eos
+                        officiis labore quam illo.</p>
+                    <button class="button grey-button center">View details <i class="ri-speed-mini-fill"></i></button>
+                </div>
+            </div>
+
+            <hr >
+        </div>
+
+    </div>
+
+</body>
+
+</html>

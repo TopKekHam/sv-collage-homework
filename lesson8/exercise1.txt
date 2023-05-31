@@ -1,0 +1,8 @@
+const fullnameElement = (firstname, lastname) => {
+    let div = document.createElement("div");
+    div.innerHTML = `<p class="firstname">${firstname}</p> <p class="lastname">${lastname}</p>`;
+
+    document.body.append(div);
+};
+
+fullnameElement("Daniel", "Riz");

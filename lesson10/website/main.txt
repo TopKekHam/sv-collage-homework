@@ -1,0 +1,43 @@
+// exercise 1
+{
+  const changeColorButton = document.querySelector("#change-color");
+  const divRect = document.querySelector("#divRect");
+  let timer;
+
+  function startTimer() {
+    changeColorButton.setAttribute("disabled", true);
+    timer = setTimeout(() => {
+      divRect.classList.add("bg-2");
+    }, 2000);
+  }
+
+  function cancelTimer() {
+    if (timer) {
+      changeColorButton.removeAttribute("disabled");
+      clearTimeout(timer);
+    }
+  }
+}
+
+// exercise 4
+{
+  const timerDisplay = document.querySelector("#timer-display");
+  let timer = 10;
+  
+  function countDown() {
+	setTimeout(() => {
+		if(timer > 0) {
+			timer = (timer - 0.01).toFixed(2);
+			timerDisplay.innerHTML = `${timer}`;
+			
+			if(timer <= 0) {
+				timerDisplay.innerHTML = `Time's Up!`;
+			} else {
+				countDown();
+			}
+		}
+	}, 10);
+  }
+
+  countDown();
+}

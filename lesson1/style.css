@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body, h1, h2, h3 ,h4, h5, h6, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.lang-table * {
+    padding: 0 5px;
+}
+
+/* ======================================================== */
+/* ignore the lines about, its just to make the page pretty */
+/* ======================================================== */
+
+body {
+    background-color: rgb(250, 244, 242);
+}
+
+#header {
+    text-align: center;
+    color:rgb(212, 0, 0);
+    font-weight: 900;
+    font-size: 3em;
+}
+
+h2 {
+    text-decoration: underline;
+    letter-spacing: 2px;
+    color:rgb(117, 0, 0);
+}
+
+.small {
+    font-size: 12px;
+    color:rgb(110, 94, 94);
+    margin-left: 10px;
+}
+
+.lang-table, .lang-table * {
+    border: 1px solid rgb(41, 32, 32);
+    border-collapse: collapse;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.secret {
+    visibility: hidden;
+}
+
+.wide {
+    font-weight: 900;
+    text-transform: uppercase;
+}
